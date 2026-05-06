@@ -7,7 +7,7 @@ from application.use_cases.generate_resume import GenerateResumeUseCase
 from application.use_cases.score_resume import ScoreResumeUseCase
 from domain.value_objects.ats_score import ATSScore
 
-_DEFAULT_OUTPUT_DIR = "/mnt/c/Users/Matheus/Documents/CV-Python"
+_DEFAULT_OUTPUT_DIR = "/c/Users/Matheus/Documents/CV-Python"
 OUTPUT_DIR = Path(os.environ.get("CV_OUTPUT_DIR", _DEFAULT_OUTPUT_DIR))
 
 

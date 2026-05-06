@@ -1,0 +1,111 @@
+{
+  "personal": {
+    "name": "Alex Johnson",
+    "title": "Software Engineer",
+    "phone": "+1 (555) 000-1234",
+    "email": "alex.johnson@example.com",
+    "location": "San Francisco, CA, USA",
+    "linkedin": "linkedin.com/in/alexjohnson",
+    "github": "github.com/alexjohnson"
+  },
+  "summary": {
+    "default": "Software Engineer focused on backend (Node/NestJS) with experience in frontend (React). Strong background in APIs, distributed systems, observability (Grafana/CloudWatch), and testing. Always looking to sharpen my skills and ship high-quality software to production.",
+    "backend_focused": "Backend Software Engineer specializing in Node.js/NestJS with expertise in distributed systems, API design, and performance optimization. Proven track record of reducing latency by 60% through architectural improvements and data structure optimization.",
+    "full_stack": "Full-Stack Software Engineer with strong backend expertise (Node.js/NestJS) and frontend experience (React/TypeScript). Experienced in end-to-end feature delivery, from requirements to production, with focus on scalable architecture and observability.",
+    "rv_focused": "Software Engineer with hands-on experience designing and maintaining complex variable compensation systems tied to real financial operations. Specialized in backend development with Node.js/NestJS, with strong expertise in business rule modeling, financial calculation engines, and CRM integrations (Dynamics 365)."
+  },
+  "experience": [
+    {
+      "company": "Acme Corp",
+      "position": "Software Engineer (Mid-level)",
+      "location": "San Francisco, CA, USA",
+      "start_date": "2021",
+      "end_date": "Present",
+      "descriptions": {
+        "default": [
+          "Involved across the full product lifecycle, from requirements definition to final delivery",
+          "Built an integration with Dynamics 365 orchestrated via automation + SQS queue + serverless (AWS Lambda) + NestJS service",
+          "Refactored APIs achieving ~60% latency improvement using data-structure/algorithm optimizations and architectural tweaks",
+          "Created Grafana dashboards using CloudWatch data that improved incident response time by 30%"
+        ],
+        "backend_focused": [
+          "Architected and implemented integration with Dynamics 365 using event-driven architecture (Power Automate + SQS + Lambda + NestJS)",
+          "Led API refactoring initiative reducing p95 latency by 60% through algorithmic optimizations and caching strategies (Redis)",
+          "Designed and maintained microservices architecture following DDD and Clean Architecture principles",
+          "Implemented comprehensive observability stack with Grafana, CloudWatch, and distributed tracing",
+          "Developed RESTful APIs with OpenAPI/Swagger documentation and automated contract testing"
+        ],
+        "full_stack": [
+          "Delivered end-to-end features across the full stack, from React frontend to NestJS backend services",
+          "Built integration pipeline connecting Dynamics 365, AWS Lambda, SQS, and NestJS microservices",
+          "Refactored critical APIs reducing latency by 60% while improving frontend data loading performance",
+          "Created monitoring dashboards in Grafana connected to CloudWatch for real-time system observability",
+          "Developed reusable React components with TypeScript, Storybook, and comprehensive test coverage"
+        ],
+        "leadership": [
+          "Mentored junior developers on best practices for API design, testing, and architectural patterns",
+          "Led technical discussions on system design and architecture decisions for new features",
+          "Collaborated with product and design teams throughout the full product lifecycle",
+          "Improved team incident response time by 30% through better observability and monitoring dashboards"
+        ],
+        "rv_focused": [
+          "Designed and maintained a commission calculation engine handling dynamic business rules based on performance tiers, partner-specific logic, and contract lifecycle events",
+          "Implemented monthly financial closing routines using NestJS cron jobs, processing 500+ invoices per cycle for thousands of active partners",
+          "Integrated Dynamics 365 CRM data into PostgreSQL via Power Automate pipelines, ensuring accuracy in mission-critical financial workflows",
+          "Refactored the commission engine using Strategy and Factory patterns, enabling rapid adaptation to new business rules",
+          "Developed manual override and recalculation flows to handle exceptional scenarios, collaborating directly with Finance teams"
+        ]
+      }
+    },
+    {
+      "company": "Beta Solutions",
+      "position": "Full-Stack Developer (Junior to Mid-level)",
+      "location": "Austin, TX, USA",
+      "start_date": "2018",
+      "end_date": "2021",
+      "descriptions": {
+        "default": [
+          "Developed the flagship product for years, delivering new features based on customer requirements",
+          "Implemented a feature integrated with Google Geolocation API that significantly accelerated operational support"
+        ],
+        "backend_focused": [
+          "Developed and maintained backend services using Node.js and PostgreSQL",
+          "Implemented REST APIs for customer integrations and internal tools",
+          "Optimized database queries and application performance for high-traffic scenarios"
+        ],
+        "full_stack": [
+          "Built full-stack features using Node.js, React, and PostgreSQL",
+          "Implemented Google Geolocation API integration to route customers to nearest service locations",
+          "Collaborated directly with clients for requirements gathering and UAT sessions",
+          "Debugged and resolved production issues across frontend and backend systems"
+        ],
+        "rv_focused": [
+          "Maintained and extended a high-criticality operational system with direct impact on field service workflows",
+          "Implemented business rule-driven features based on client requirements, developing skills in translating complex operational logic into software"
+        ]
+      }
+    }
+  ],
+  "skills": {
+    "programming_languages": ["JavaScript", "TypeScript", "Python", "Go"],
+    "backend": ["Node.js", "NestJS", "Express"],
+    "frontend": ["React", "TailwindCSS", "Material UI"],
+    "architecture": ["DDD", "Clean Architecture", "Event-Driven Architecture", "Microservices", "Strategy Pattern", "Factory Pattern"],
+    "cloud_infra": ["AWS (S3, Lambda, SQS, SNS, CloudWatch)", "Docker", "Kubernetes"],
+    "observability": ["Grafana", "CloudWatch", "Prometheus"],
+    "databases": ["PostgreSQL", "MySQL", "Redis"],
+    "testing_ci": ["Jest", "React Testing Library", "GitHub Actions"],
+    "languages": ["English (Native)", "Spanish (Intermediate)"],
+    "other": ["REST APIs", "Swagger/OpenAPI", "Git", "Agile/Scrum"]
+  },
+  "education": [
+    {
+      "institution": "State University",
+      "degree": "Bachelor of Science in Computer Science",
+      "location": "Austin, TX, USA",
+      "start_date": "2014",
+      "end_date": "2018"
+    }
+  ],
+  "certifications": []
+}

@@ -1,0 +1,106 @@
+{
+  "locale": "pt",
+  "personal": {
+    "name": "Alex Johnson",
+    "title": "Engenheiro de Software",
+    "phone": "+55 11 99000-1234",
+    "email": "alex.johnson@example.com",
+    "location": "São Paulo, SP, Brasil",
+    "linkedin": "linkedin.com/in/alexjohnson",
+    "github": "github.com/alexjohnson"
+  },
+  "summary": {
+    "default": "Engenheiro de Software com foco em backend (Node.js/NestJS) e experiência em frontend (React). Sólida atuação em APIs, sistemas distribuídos, observabilidade (Grafana/CloudWatch) e testes automatizados. Comprometido com a entrega de software de qualidade em produção.",
+    "backend_focused": "Engenheiro de Software Backend especializado em Node.js/NestJS com expertise em sistemas distribuídos, design de APIs e otimização de performance. Histórico comprovado de redução de latência em 60% por meio de melhorias arquiteturais e otimizações de algoritmos.",
+    "full_stack": "Engenheiro de Software Full-Stack com forte expertise em backend (Node.js/NestJS) e experiência em frontend (React/TypeScript). Atuação em entregas end-to-end, do requisito à produção, com foco em arquitetura escalável e observabilidade.",
+    "rv_focused": "Engenheiro de Software com experiência prática no desenvolvimento e manutenção de sistemas complexos de remuneração variável com impacto financeiro real. Especializado em backend com Node.js/NestJS, com forte domínio em modelagem de regras de negócio, engines de cálculo de comissões e integrações com CRM (Dynamics 365)."
+  },
+  "experience": [
+    {
+      "company": "Acme Corp",
+      "position": "Engenheiro de Software (Pleno)",
+      "location": "São Paulo, Brasil",
+      "start_date": "2021",
+      "end_date": "Atual",
+      "descriptions": {
+        "default": [
+          "Atuação em todo o ciclo de vida do produto, da definição de requisitos à entrega final",
+          "Integração com Dynamics 365 orquestrada via automação + fila SQS + serverless (AWS Lambda) + serviço NestJS",
+          "Refatoração de APIs com melhoria de ~60% na latência por meio de otimizações de algoritmos e ajustes arquiteturais",
+          "Criação de dashboards no Grafana com dados do CloudWatch, reduzindo o tempo médio de resposta a incidentes em 30%"
+        ],
+        "backend_focused": [
+          "Projetou e implementou integração com Dynamics 365 utilizando arquitetura orientada a eventos (Power Automate + SQS + Lambda + NestJS)",
+          "Liderou refatoração de APIs com redução de 60% na latência p95 através de otimizações algorítmicas e estratégias de cache (Redis)",
+          "Projetou e manteve arquitetura de microsserviços seguindo DDD e Clean Architecture",
+          "Implementou stack completo de observabilidade com Grafana, CloudWatch e rastreamento distribuído",
+          "Desenvolveu APIs RESTful com documentação OpenAPI/Swagger e testes de contrato automatizados"
+        ],
+        "full_stack": [
+          "Entregou features end-to-end, do frontend React aos serviços backend NestJS",
+          "Construiu pipeline de integração conectando Dynamics 365, AWS Lambda, SQS e microsserviços NestJS",
+          "Refatorou APIs críticas reduzindo latência em 60% e melhorando a performance de carregamento do frontend",
+          "Criou dashboards de monitoramento no Grafana integrados ao CloudWatch para observabilidade em tempo real",
+          "Desenvolveu componentes React reutilizáveis com TypeScript, Storybook e cobertura abrangente de testes"
+        ],
+        "rv_focused": [
+          "Projetou e manteve engine de cálculo de comissões com regras de negócio dinâmicas baseadas em faixas de performance, lógica por parceiro e eventos do ciclo de vida contratual",
+          "Implementou rotinas mensais de fechamento financeiro via cron jobs (NestJS), processando ~500 notas fiscais por ciclo para milhares de parceiros ativos",
+          "Integrou dados do CRM Dynamics 365 ao PostgreSQL via pipelines Power Automate, garantindo precisão em fluxos financeiros de alta criticidade",
+          "Refatorou a engine de comissões utilizando os padrões Strategy e Factory, permitindo adaptação ágil a novas regras",
+          "Desenvolveu fluxos de override manual e recálculo para cenários excepcionais, colaborando diretamente com o time de Finanças"
+        ]
+      }
+    },
+    {
+      "company": "Beta Solutions",
+      "position": "Desenvolvedor Full-Stack (Júnior ao Pleno)",
+      "location": "São Paulo, Brasil",
+      "start_date": "2018",
+      "end_date": "2021",
+      "descriptions": {
+        "default": [
+          "Desenvolvimento do produto principal por anos, implementando novas features conforme requisitos dos clientes",
+          "Implementação de feature integrada com Google Geolocation API que agilizou significativamente o atendimento operacional de campo"
+        ],
+        "backend_focused": [
+          "Desenvolvimento e manutenção de serviços backend em Node.js e PostgreSQL",
+          "Implementação de APIs REST para integrações com clientes e ferramentas internas",
+          "Otimização de queries e performance da aplicação para cenários de alto tráfego"
+        ],
+        "full_stack": [
+          "Desenvolvimento de features full-stack com Node.js, React e PostgreSQL",
+          "Integração com Google Geolocation API para direcionar clientes ao ponto de atendimento mais próximo",
+          "Colaboração direta com clientes para levantamento de requisitos e sessões de UAT",
+          "Diagnóstico e resolução de problemas em produção no frontend e backend"
+        ],
+        "rv_focused": [
+          "Manutenção e evolução de sistema de alta criticidade operacional com impacto direto nos fluxos de atendimento de campo",
+          "Implementação de features orientadas a regras de negócio conforme requisitos dos clientes, desenvolvendo capacidade de traduzir lógica operacional complexa em software"
+        ]
+      }
+    }
+  ],
+  "skills": {
+    "linguagens": ["JavaScript", "TypeScript", "Python", "Go"],
+    "backend": ["Node.js", "NestJS", "Express"],
+    "frontend": ["React", "TailwindCSS", "Material UI"],
+    "arquitetura": ["DDD", "Clean Architecture", "Event-Driven Architecture", "Microsserviços", "Strategy Pattern", "Factory Pattern"],
+    "cloud_infra": ["AWS (S3, Lambda, SQS, SNS, CloudWatch)", "Docker", "Kubernetes"],
+    "observabilidade": ["Grafana", "CloudWatch", "Prometheus"],
+    "banco_de_dados": ["PostgreSQL", "MySQL", "Redis"],
+    "testes_ci": ["Jest", "React Testing Library", "GitHub Actions"],
+    "idiomas": ["Português (Nativo)", "Inglês (Fluente)"],
+    "outros": ["REST APIs", "Swagger/OpenAPI", "Git", "Agile/Scrum"]
+  },
+  "education": [
+    {
+      "institution": "Universidade Estadual",
+      "degree": "Bacharelado em Ciência da Computação",
+      "location": "São Paulo, Brasil",
+      "start_date": "2014",
+      "end_date": "2018"
+    }
+  ],
+  "certifications": []
+}

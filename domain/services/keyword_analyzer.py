@@ -1,4 +1,5 @@
 import re
+import unicodedata
 from collections import Counter
 from typing import List
 
@@ -12,23 +13,34 @@ STOP_WORDS = {
     'these', 'those', 'i', 'you', 'he', 'she', 'it', 'we', 'they',
     'what', 'which', 'who', 'when', 'where', 'why', 'how', 'all', 'each',
     'every', 'both', 'few', 'more', 'most', 'other', 'some', 'such',
+    # Portuguese stop words
+    'com', 'para', 'por', 'que', 'uma', 'num', 'nas', 'dos', 'das',
+    'nos', 'sua', 'seu', 'suas', 'seus', 'como', 'mais', 'ser', 'ter',
+    'tem', 'caso', 'seja', 'pelo', 'pela', 'pelos', 'pelas', 'entre',
+    'sobre', 'isso', 'esta', 'este', 'eles', 'elas', 'voce', 'nos',
+    'sim', 'nao', 'muito', 'bem', 'assim', 'pode', 'cada', 'quando',
 }
 
 TECH_KEYWORDS = {
     'javascript', 'typescript', 'python', 'java', 'go', 'rust', 'php',
     'node', 'react', 'vue', 'angular', 'nestjs', 'express', 'django',
-    'flask', 'spring', 'docker', 'kubernetes', 'aws', 'azure', 'gcp',
-    'postgresql', 'mysql', 'mongodb', 'redis', 'graphql', 'rest', 'api',
-    'microservices', 'serverless', 'lambda', 'ec2', 's3', 'sqs', 'sns',
-    'git', 'ci/cd', 'jenkins', 'github', 'gitlab', 'jira', 'agile',
-    'scrum', 'tdd', 'bdd', 'jest', 'pytest', 'junit', 'selenium',
-    'terraform', 'ansible', 'grafana', 'prometheus', 'cloudwatch',
-    'datadog', 'elk', 'kafka', 'rabbitmq', 'nginx', 'apache',
+    'flask', 'fastapi', 'spring', 'docker', 'kubernetes', 'aws', 'azure',
+    'gcp', 'postgresql', 'mysql', 'mongodb', 'redis', 'graphql', 'rest',
+    'api', 'microservices', 'serverless', 'lambda', 'ec2', 's3', 'sqs',
+    'sns', 'git', 'gitflow', 'ci/cd', 'jenkins', 'github', 'gitlab',
+    'jira', 'agile', 'scrum', 'kanban', 'tdd', 'bdd', 'jest', 'pytest',
+    'junit', 'selenium', 'terraform', 'ansible', 'grafana', 'prometheus',
+    'cloudwatch', 'datadog', 'elk', 'kafka', 'rabbitmq', 'nginx', 'apache',
+    'sonarqube', 'csharp',
 }
 
 
+def _strip_accents(text: str) -> str:
+    return unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode('ascii')
+
+
 def extract_keywords(job_description: str, top_n: int = 30) -> List[str]:
-    text = re.sub(r'[^a-z0-9\s\-/]', ' ', job_description.lower())
+    text = re.sub(r'[^a-z0-9\s\-/]', ' ', _strip_accents(job_description.lower()))
     words = [w for w in text.split() if w not in STOP_WORDS and len(w) > 2]
     bigrams = [f"{words[i]} {words[i+1]}" for i in range(len(words) - 1)]
 
@@ -59,9 +71,9 @@ def extract_keywords(job_description: str, top_n: int = 30) -> List[str]:
 
 
 def match_keywords(keywords: List[str], resume_text: str) -> KeywordMatch:
-    resume_lower = resume_text.lower()
-    matched = [kw for kw in keywords if kw.lower() in resume_lower]
-    missing = [kw for kw in keywords if kw.lower() not in resume_lower]
+    resume_normalized = _strip_accents(resume_text.lower())
+    matched = [kw for kw in keywords if _strip_accents(kw.lower()) in resume_normalized]
+    missing = [kw for kw in keywords if _strip_accents(kw.lower()) not in resume_normalized]
     rate = round(len(matched) / len(keywords) * 100, 1) if keywords else 0.0
     return KeywordMatch(matched=matched, missing=missing, match_rate=rate, total_keywords=len(keywords))
 

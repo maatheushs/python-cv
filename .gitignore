@@ -40,9 +40,10 @@ env/
 # Environment variables
 .env
 
-# Personal resume data (use data/*.example.json as templates)
+# Personal data (use data/*.example.json and data/example_job_description.txt as templates)
 data/resume_en.json
 data/resume_pt.json
+data/*.txt
 
 # OS
 .DS_Store
